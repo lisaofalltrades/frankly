@@ -18,6 +18,24 @@
   <title></title>
 </head>
 <body>
+  <header>
+    <nav>
+      <a href='/' class='home'>HOME</a>
+    </nav>
+  </header>
+
+    <% if current_user %> <!--if user is signed in..-->
+    <div>
+      <a href='' class=''> placeholder</a> <!--allow them to add thangs-->
+    </div>
+
+
+    <!-- and log out-->
+    <form class="logoutForm" action="/logout" method="POST">
+      <input type="hidden" name="_method" value="delete">
+      <input class="logoutBtn" type="submit" value="logout">
+    </form>
+  <% end %>
   <%= yield %>
 </body>
 </html>
